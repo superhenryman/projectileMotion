@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ThingController">
+    <children>
+      <Label layoutX="24.0" layoutY="278.0" prefHeight="18.0" prefWidth="91.0" text="Initial Velocity" />
+      <Label layoutX="24.0" layoutY="314.0" text="Angle" />
+      <Line endX="1.220703143189894E-5" endY="233.1000213623047" startX="942.8644409179688" startY="233.1000213623047" strokeWidth="5.0" />
+      <Label layoutX="26.0" layoutY="359.0" text="Projectile Motion Simulation" />
+      <TextField fx:id="velocity_init" layoutX="115.0" layoutY="275.0" />
+      <TextField fx:id="angle_init" layoutX="115.0" layoutY="310.0" />
+      <Button fx:id="submitButton" layoutX="486.0" layoutY="346.0" mnemonicParsing="false" onAction="#onSubmit" text="Draw Trajectory" />
+      <LineChart fx:id="trajectoryChart" layoutX="24.0" layoutY="14.0" prefHeight="214.0" prefWidth="509.0" legendVisible="false">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Label layoutX="334.0" layoutY="257.0" text="Height:" />
+      <Label fx:id="Height" layoutX="410.0" layoutY="257.0" prefHeight="18.0" prefWidth="150.0" />
+      <Label layoutX="335.0" layoutY="287.0" text="Length:" />
+      <Label fx:id="Length" layoutX="396.0" layoutY="287.0" prefHeight="18.0" prefWidth="170.0" />
+      <Label layoutX="334.0" layoutY="314.0" text="Time: " />
+      <Label fx:id="Time" layoutX="375.0" layoutY="313.0" prefHeight="18.0" prefWidth="169.0" />
+    </children>
+</AnchorPane>
